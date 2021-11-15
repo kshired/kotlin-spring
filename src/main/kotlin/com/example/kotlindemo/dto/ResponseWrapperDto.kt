@@ -7,8 +7,8 @@ open class ResponseWrapperDto(status: ResponseStatus) {
     init {
         when (status) {
             ResponseStatus.SUCCESS -> this.status = "success"
-            ResponseStatus.ERROR -> this.status = "Error"
-            ResponseStatus.FAIL -> this.status = "Fail"
+            ResponseStatus.ERROR -> this.status = "error"
+            ResponseStatus.FAIL -> this.status = "fail"
         }
     }
 }
