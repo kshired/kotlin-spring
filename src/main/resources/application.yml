@@ -6,4 +6,7 @@ spring:
         url: jdbc:h2:tcp://localhost/~/kotlin
     jpa:
         hibernate:
-            ddl-auto: create
+            ddl-auto: validate
+        properties:
+            hibernate:
+                show_sql: true

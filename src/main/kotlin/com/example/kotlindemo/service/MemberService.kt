@@ -17,6 +17,10 @@ class MemberService(private val memberRepository: MemberRepository, private val 
         return member.id
     }
 
+    fun findAllMembers(): List<Member> {
+        return memberRepository.findAllMemberByFetch()
+    }
+
     @Transactional
     fun addTeam(addTeamDto: AddTeamDto): Boolean {
         val findMember = memberRepository.findByIdOrNull(addTeamDto.memberId)
