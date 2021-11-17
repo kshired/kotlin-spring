@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 class TeamService(private val teamRepository: TeamRepository) {
 
     fun createTeam(teamDto: TeamDto):Long?{
-        val team = Team(name = teamDto.name)
+        val team = Team(teamDto.name)
         teamRepository.save(team)
         return team.id
     }

@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class MemberService(private val memberRepository: MemberRepository, private val teamRepository: TeamRepository) {
     fun createMember(memberDto: MemberDto): Long? {
-        val member = Member(email = memberDto.email, name = memberDto.name)
+        val member = Member(memberDto.email, memberDto.name)
         memberRepository.save(member)
         return member.id
     }

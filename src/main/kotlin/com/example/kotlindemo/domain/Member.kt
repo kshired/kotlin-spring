@@ -3,15 +3,15 @@ package com.example.kotlindemo.domain
 import javax.persistence.*
 
 @Entity
-class Member(name:String, email:String) {
+class Member(_name:String, _email:String) {
     @Id
     @GeneratedValue
     @Column(name="MEMBER_ID")
     var id: Long? = null
         private set
-    var name: String = name
+    var name: String = _name
         private set
-    var email: String = email
+    var email: String = _email
         private set
 
     @ManyToOne(fetch = FetchType.EAGER)
